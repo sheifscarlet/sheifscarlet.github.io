@@ -1,4 +1,3 @@
-
 const canvas = document.getElementById('matrix');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -34,7 +33,6 @@ if (canvas) {
   setInterval(draw, 33);
 }
 
-
 document.addEventListener('mousemove', (e) => {
   const trail = document.createElement('div');
   trail.className = 'cursor-trail';
@@ -46,7 +44,6 @@ document.addEventListener('mousemove', (e) => {
     trail.remove();
   }, 500);
 });
-
 
 document.addEventListener('mousedown', () => {
   const glow = document.createElement('div');
@@ -62,7 +59,6 @@ document.addEventListener('mousedown', () => {
   }, 300);
 });
 
-
 const modal = document.getElementById('modal');
 const cards = document.querySelectorAll('.card');
 
@@ -77,7 +73,7 @@ if (modal && cards.length) {
       });
       modal.style.display = 'block';
 
-      
+      // Анимация элементов модалки
       const modalContent = modal.querySelector('.modal-content[style*="block"]');
       gsap.fromTo(modalContent.querySelector('h3'), 
         { opacity: 0, y: 20 }, 
@@ -107,6 +103,10 @@ if (modal && cards.length) {
         { opacity: 0, y: 20 }, 
         { opacity: 1, y: 0, duration: 0.5, delay: 0.6, ease: 'power2.out' }
       );
+      gsap.fromTo(modalContent.querySelector('.btn-secondary'), 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, duration: 0.5, delay: 0.7, ease: 'power2.out' }
+      );
     });
   });
 
@@ -125,7 +125,6 @@ if (modal && cards.length) {
     }
   });
 }
-
 
 document.querySelectorAll('h1, h2').forEach(el => {
   gsap.fromTo(el, 
