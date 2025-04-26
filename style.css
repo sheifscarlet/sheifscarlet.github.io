@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: #0A0A0A;
+  color: #00FF00;
+  overflow-x: hidden;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300FF00" d="M2 2l16 16-6-6-4 4-6-6z"/></svg>'), auto;
+}
+
+
+a, button, .btn, .card, .close, [role="button"], [onclick] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300FF00" d="M2 2l16 16-6-6-4 4-6-6z"/></svg>'), auto !important;
+}
+
+
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #00FF00;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.7;
+  box-shadow: 0 0 10px #00FF00;
+  animation: glitch 0.3s infinite, fade 0.5s ease-out forwards;
+}
+
+@keyframes fade {
+  to { opacity: 0; transform: scale(0); }
+}
+
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0A0A0A;
+  padding: 20px;
+  z-index: 10;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #00FF00;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+nav a.active, nav a:hover {
+  text-shadow: 0 0 10px #00FF00;
+}
+
+main {
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 48px;
+  text-shadow: 0 0 10px #00FF00;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.intro-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 10px 0 20px;
+  max-width: 600px;
+  text-shadow: 0 0 5px #00FF00;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #00FF00;
+  color: #0A0A0A;
+  box-shadow: 0 0 10px #00FF00;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #00FF00;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #0A0A0A;
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.card h3 {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0 0 5px #00FF00;
+}
+
+.card p {
+  font-size: 12px;
+  padding: 0 10px 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px #00FF00;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0A0A0A;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #00FF00;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px #00FF00;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #0A0A0A;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 20px #00FF00;
+  position: relative;
+  border-radius: 8px;
+}
+
+.modal-content h3 {
+  font-size: 28px;
+  text-shadow: 0 0 10px #00FF00;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-details {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00FF00;
+  text-align: center;
+}
+
+.modal-release {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #00FF00;
+  text-align: center;
+}
+
+.modal-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0;
+  text-shadow: 0 0 5px #00FF00;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin: 15px 0;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00FF00;
+}
+
+.youtube-player {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 1px solid #00FF00;
+  margin: 20px 0;
+  box-shadow: 0 0 10px #00FF00;
+}
+
+.modal-content .btn {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 12px 30px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+
+.screenshots {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #00FF00 #0A0A0A;
+}
+
+.screenshots::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshots::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+.screenshots::-webkit-scrollbar-thumb {
+  background: #00FF00;
+  border-radius: 4px;
+}
+
+.screenshot {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #00FF00;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00FF00;
+  transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.card:hover {
+  animation: glitch 0.3s infinite;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 80px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .intro-text {
+    font-size: 12px;
+  }
+  .youtube-player {
+    height: 200px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  .modal-content h3 {
+    font-size: 20px;
+  }
+  .modal-details {
+    font-size: 13px;
+  }
+  .modal-release,
+  .modal-description {
+    font-size: 12px;
+  }
+  iframe {
+    height: 200px;
+  }
+  .screenshot {
+    width: 150px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artem Bobrov - Unity Assets Portfolio">
+  <meta name="keywords" content="Unity, C#, Assets">
+  <title>Assets - Artem Bobrov</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="assets.html" class="active">Assets</a>
+      <a href="apps.html">Apps</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+  <main>
+    <section id="assets">
+      <h2>Assets</h2>
+      <p class="intro-text">These are Unity assets I've developed, including shaders, tools, and scripts to enhance game development workflows.</p>
+      <div class="grid">
+        <div class="card" data-modal="asset1">
+          <div class="card-image-wrapper">
+            <img src="assets/images/asset1.jpg" alt="Asset 1">
+          </div>
+          <h3>Pixel Shader</h3>
+          <p>Retro pixel effects</p>
+        </div>
+        <div class="card" data-modal="asset2">
+          <div class="card-image-wrapper">
+            <img src="assets/images/asset2.jpg" alt="Asset 2">
+          </div>
+          <h3>Procedural Generator</h3>
+          <p>Dynamic terrain generator</p>
+        </div>
+        <div class="card" data-modal="asset3">
+          <div class="card-image-wrapper">
+            <img src="assets/images/asset3.jpg" alt="Asset 3">
+          </div>
+          <h3>Animation Toolkit</h3>
+          <p>Tools for character animation</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="mailto:artBobr@outlook.com">Email</a>
+    <a href="https://github.com/sheifscarlet" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/artem-bobrovv/" target="_blank">LinkedIn</a>
+    <a href="https://sheifscarlet.itch.io/" target="_blank">itch.io</a>
+    <a href="https://t.me/bibizianich" target="_blank">Telegram</a>
+  </footer>
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content" id="asset1" style="display: none;">
+      <span class="close">×</span>
+      <h3>Pixel Shader</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, HLSL</p>
+      <p class="modal-release">Published in 2023 on Unity Asset Store</p>
+      <p class="modal-description">A shader for retro pixel effects, used in 10+ projects to enhance visuals.</p>
+      <div class="screenshots">
+        <img src="assets/images/asset1_screenshot1.jpg" alt="Pixel Shader Screenshot 1" class="screenshot">
+        <img src="assets/images/asset1_screenshot2.jpg" alt="Pixel Shader Screenshot 2" class="screenshot">
+        <img src="assets/images/asset1_screenshot3.jpg" alt="Pixel Shader Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-asset1-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://assetstore.unity.com/your-asset" class="btn" target="_blank">Get on Unity Asset Store</a>
+    </div>
+    <div class="modal-content" id="asset2" style="display: none;">
+      <span class="close">×</span>
+      <h3>Procedural Generator</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, C#</p>
+      <p class="modal-release">Published in 2024 on Unity Asset Store</p>
+      <p class="modal-description">A tool for generating dynamic terrains and landscapes procedurally.</p>
+      <div class="screenshots">
+        <img src="assets/images/asset2_screenshot1.jpg" alt="Procedural Generator Screenshot 1" class="screenshot">
+        <img src="assets/images/asset2_screenshot2.jpg" alt="Procedural Generator Screenshot 2" class="screenshot">
+        <img src="assets/images/asset2_screenshot3.jpg" alt="Procedural Generator Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-asset2-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://assetstore.unity.com/your-asset2" class="btn" target="_blank">Get on Unity Asset Store</a>
+    </div>
+    <div class="modal-content" id="asset3" style="display: none;">
+      <span class="close">×</span>
+      <h3>Animation Toolkit</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, C#</p>
+      <p class="modal-release">Published in 2024 on Unity Asset Store</p>
+      <p class="modal-description">A set of tools for creating and managing character animations in Unity.</p>
+      <div class="screenshots">
+        <img src="assets/images/asset3_screenshot1.jpg" alt="Animation Toolkit Screenshot 1" class="screenshot">
+        <img src="assets/images/asset3_screenshot2.jpg" alt="Animation Toolkit Screenshot 2" class="screenshot">
+        <img src="assets/images/asset3_screenshot3.jpg" alt="Animation Toolkit Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-asset3-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://assetstore.unity.com/your-asset3" class="btn" target="_blank">Get on Unity Asset Store</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

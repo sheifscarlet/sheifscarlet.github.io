@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artem Bobrov - Unity Games Portfolio">
+  <meta name="keywords" content="Unity, C#, GameDev">
+  <title>Games - Artem Bobrov</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html" class="active">Games</a>
+      <!-- <a href="assets.html">Assets</a> -->
+      <!-- <a href="apps.html">Apps</a> -->
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+  <main>
+    <section id="games">
+      <h2>Games</h2>
+      <p class="intro-text">Here are some games I've created, either to be released, or during game jams, or to showcase my skills using Unity.</p>
+      <div class="grid">
+        <div class="card" data-modal="game1">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/golfik.png" alt="Game 1">
+          </div>
+          <h3>GOLFIK</h3>
+          <p>2D golf game with retro vibes</p>
+        </div>
+        <div class="card" data-modal="game2">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/keiontherun.png" alt="Game 2">
+          </div>
+          <h3>KEI ON THE RUN</h3>
+          <p>Low poly 3D platformer inspired by the Crash Bandicoot series.</p>
+        </div>
+        <div class="card" data-modal="game3">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/watermelonsurvivor.png" alt="Game 3">
+          </div>
+          <h3>WATERMELON SURVIVOR</h3>
+          <p>Survival game with juicy arcade action</p>
+        </div>
+        <div class="card" data-modal="game4">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/quizmaster.png" alt="Game 4">
+          </div>
+          <h3>QUIZ MASTER</h3>
+          <p>Engaging trivia game with dynamic challenges</p>
+        </div>
+        <div class="card" data-modal="game5">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/supertankbros.png" alt="Game 5">
+          </div>
+          <h3>SUPER TANK BROS</h3>
+          <p>Action-packed tank battle arena game</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="mailto:artBobr@outlook.com">Email</a>
+    <a href="https://github.com/sheifscarlet" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/artem-bobrovv/" target="_blank">LinkedIn</a>
+    <a href="https://sheifscarlet.itch.io/" target="_blank">itch.io</a>
+    <a href="https://t.me/bibizianich" target="_blank">Telegram</a>
+  </footer>
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content" id="game1" style="display: none;">
+      <span class="close">×</span>
+      <h3>GOLFIK</h3>
+      <p class="modal-details">Role: Lead Developer. Stack: Unity, C#, Aseprite</p>
+      <p class="modal-release">Released in 2023 on itch.io</p>
+      <p class="modal-description">A 2D golf game with retro pixel art, created to showcase my skills in Unity.</p>
+      <div class="screenshots">
+        <img src="assets/images/games/golfik_slide1.png" alt="GOLFIK Screenshot 1" class="screenshot">
+        <img src="assets/images/games/golfik_slide2.png" alt="GOLFIK Screenshot 2" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-game1-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://itch.io/your-game" class="btn" target="_blank">Play on itch.io</a>
+    </div>
+    <div class="modal-content" id="game2" style="display: none;">
+      <span class="close">×</span>
+      <h3>KEI ON THE RUN</h3>
+      <p class="modal-details">Role: VR Developer. Stack: Unity, C#, Oculus SDK</p>
+      <p class="modal-release">Released in 2024 on Steam</p>
+      <p class="modal-description">A low poly 3D platformer inspired by the Crash Bandicoot series, built for Oculus.</p>
+      <div class="screenshots">
+        <img src="assets/images/games/keiontherun_slide1.png" alt="KEI ON THE RUN Screenshot 1" class="screenshot">
+        <img src="assets/images/games/keiontherun_slide2.png" alt="KEI ON THE RUN Screenshot 2" class="screenshot">
+        <img src="assets/images/games/keiontherun_slide3.png" alt="KEI ON THE RUN Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-game2-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://store.steampowered.com/your-game" class="btn" target="_blank">Get on Steam</a>
+    </div>
+    <div class="modal-content" id="game3" style="display: none;">
+      <span class="close">×</span>
+      <h3>WATERMELON SURVIVOR</h3>
+      <p class="modal-details">Role: Lead Developer. Stack: Unity, C#</p>
+      <p class="modal-release">Released in 2024 on itch.io</p>
+      <p class="modal-description">A fast-paced survival arcade game where you fight waves of enemies with juicy watermelon-themed mechanics.</p>
+      <div class="screenshots">
+        <img src="assets/images/games/watermelonsurvivor_slide1.png" alt="WATERMELON SURVIVOR Screenshot 1" class="screenshot">
+        <img src="assets/images/games/watermelonsurvivor_slide2.png" alt="WATERMELON SURVIVOR Screenshot 2" class="screenshot">
+        <img src="assets/images/games/watermelonsurvivor_slide3.png" alt="WATERMELON SURVIVOR Screenshot 3" class="screenshot">
+        <img src="assets/images/games/watermelonsurvivor_slide4.png" alt="WATERMELON SURVIVOR Screenshot 4" class="screenshot">
+        <img src="assets/images/games/watermelonsurvivor_slide5.png" alt="WATERMELON SURVIVOR Screenshot 5" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-game3-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://itch.io/your-watermelon-survivor" class="btn" target="_blank">Play on itch.io</a>
+    </div>
+    <div class="modal-content" id="game4" style="display: none;">
+      <span class="close">×</span>
+      <h3>QUIZ MASTER</h3>
+      <p class="modal-details">Role: Lead Developer. Stack: Unity, C#</p>
+      <p class="modal-release">Released in 2024 on itch.io</p>
+      <p class="modal-description">A trivia game with dynamic questions and engaging challenges to test your knowledge.</p>
+      <div class="screenshots">
+        <img src="assets/images/games/quizmaster_slide1.png" alt="QUIZ MASTER Screenshot 1" class="screenshot">
+        <img src="assets/images/games/quizmaster_slide2.png" alt="QUIZ MASTER Screenshot 2" class="screenshot">
+        <img src="assets/images/games/quizmaster_slide3.png" alt="QUIZ MASTER Screenshot 3" class="screenshot">
+        <img src="assets/images/games/quizmaster_slide4.png" alt="QUIZ MASTER Screenshot 4" class="screenshot">
+        <img src="assets/images/games/quizmaster_slide5.png" alt="QUIZ MASTER Screenshot 5" class="screenshot">
+      </div>
+      <a href="https://itch.io/your-quiz-master" class="btn" target="_blank">Play on itch.io</a>
+    </div>
+    <div class="modal-content" id="game5" style="display: none;">
+      <span class="close">×</span>
+      <h3>SUPER TANK BROS</h3>
+      <p class="modal-details">Role: Lead Developer. Stack: Unity, C#</p>
+      <p class="modal-release">Released in 2024 on itch.io</p>
+      <p class="modal-description">An action-packed tank battle arena game with multiplayer and strategic gameplay.</p>
+      <div class="screenshots">
+        <img src="assets/images/games/supertankbros_slide1.png" alt="SUPER TANK BROS Screenshot 1" class="screenshot">
+        <img src="assets/images/games/supertankbros_slide2.png" alt="SUPER TANK BROS Screenshot 2" class="screenshot">
+        <img src="assets/images/games/supertankbros_slide3.png" alt="SUPER TANK BROS Screenshot 3" class="screenshot">
+        <img src="assets/images/games/supertankbros_slide4.png" alt="SUPER TANK BROS Screenshot 4" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-game5-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://itch.io/your-super-tank-bros" class="btn" target="_blank">Play on itch.io</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

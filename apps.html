@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artem Bobrov - Unity Apps Portfolio">
+  <meta name="keywords" content="Unity, C#, Apps">
+  <title>Apps - Artem Bobrov</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="assets.html">Assets</a>
+      <a href="apps.html" class="active">Apps</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+  <main>
+    <section id="apps">
+      <h2>Apps</h2>
+      <p class="intro-text">The following are some apps or tools I've made or heavily contributed to.</p>
+      <div class="grid">
+        <div class="card" data-modal="app1">
+          <div class="card-image-wrapper">
+            <img src="assets/images/app1.jpg" alt="App 1">
+          </div>
+          <h3>Task Manager</h3>
+          <p>Android productivity app</p>
+        </div>
+        <div class="card" data-modal="app2">
+          <div class="card-image-wrapper">
+            <img src="assets/images/app2.jpg" alt="App 2">
+          </div>
+          <h3>Habit Tracker</h3>
+          <p>Track your daily habits</p>
+        </div>
+        <div class="card" data-modal="app3">
+          <div class="card-image-wrapper">
+            <img src="assets/images/app3.jpg" alt="App 3">
+          </div>
+          <h3>AR Scanner</h3>
+          <p>AR object scanning tool</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="mailto:artBobr@outlook.com">Email</a>
+    <a href="https://github.com/sheifscarlet" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/artem-bobrovv/" target="_blank">LinkedIn</a>
+    <a href="https://sheifscarlet.itch.io/" target="_blank">itch.io</a>
+    <a href="https://t.me/bibizianich" target="_blank">Telegram</a>
+  </footer>
+  <div id="modal" class="modal" style="display: none;">
+    <div class="modal-content" id="app1" style="display: none;">
+      <span class="close">×</span>
+      <h3>Task Manager</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, C#, Firebase</p>
+      <p class="modal-release">Released in 2023 on Google Play</p>
+      <p class="modal-description">A productivity app for Android to manage tasks efficiently.</p>
+      <div class="screenshots">
+        <img src="assets/images/app1_screenshot1.jpg" alt="Task Manager Screenshot 1" class="screenshot">
+        <img src="assets/images/app1_screenshot2.jpg" alt="Task Manager Screenshot 2" class="screenshot">
+        <img src="assets/images/app1_screenshot3.jpg" alt="Task Manager Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-app1-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://play.google.com/store/your-app" class="btn" target="_blank">Get on Google Play</a>
+    </div>
+    <div class="modal-content" id="app2" style="display: none;">
+      <span class="close">×</span>
+      <h3>Habit Tracker</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, C#, SQLite</p>
+      <p class="modal-release">Released in 2024 on Google Play</p>
+      <p class="modal-description">An app to help you build and track daily habits with a gamified approach.</p>
+      <div class="screenshots">
+        <img src="assets/images/app2_screenshot1.jpg" alt="Habit Tracker Screenshot 1" class="screenshot">
+        <img src="assets/images/app2_screenshot2.jpg" alt="Habit Tracker Screenshot 2" class="screenshot">
+        <img src="assets/images/app2_screenshot3.jpg" alt="Habit Tracker Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-app2-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://play.google.com/store/your-app2" class="btn" target="_blank">Get on Google Play</a>
+    </div>
+    <div class="modal-content" id="app3" style="display: none;">
+      <span class="close">×</span>
+      <h3>AR Scanner</h3>
+      <p class="modal-details">Role: AR Developer. Stack: Unity, C#, ARKit</p>
+      <p class="modal-release">Released in 2024 on Google Play</p>
+      <p class="modal-description">An AR tool for scanning and interacting with real-world objects using ARKit.</p>
+      <div class="screenshots">
+        <img src="assets/images/app3_screenshot1.jpg" alt="AR Scanner Screenshot 1" class="screenshot">
+        <img src="assets/images/app3_screenshot2.jpg" alt="AR Scanner Screenshot 2" class="screenshot">
+        <img src="assets/images/app3_screenshot3.jpg" alt="AR Scanner Screenshot 3" class="screenshot">
+      </div>
+      <iframe src="https://www.youtube.com/embed/your-app3-video-id" frameborder="0" allowfullscreen></iframe>
+      <a href="https://play.google.com/store/your-app3" class="btn" target="_blank">Get on Google Play</a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
