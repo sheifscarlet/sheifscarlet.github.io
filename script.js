@@ -60,6 +60,7 @@ document.addEventListener('mousedown', () => {
 });
 
 const modal = document.getElementById('modal');
+const imageModal = document.getElementById('image-modal');
 const cards = document.querySelectorAll('.card');
 
 if (modal && cards.length) {
@@ -122,6 +123,42 @@ if (modal && cards.length) {
     if (e.target === modal) {
       modal.style.display = 'none';
       document.querySelectorAll('iframe').forEach(iframe => iframe.src = '');
+    }
+  });
+}
+
+// Image Modal Logic
+const screenshots = document.querySelectorAll('.screenshot');
+const fullImage = document.getElementById('full-image');
+
+if (imageModal && screenshots.length) {
+  screenshots.forEach(screenshot => {
+    screenshot.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      fullImage.src = screenshot.src;
+      imageModal.style.display = 'block';
+
+      // Animation for image modal
+      gsap.fromTo(fullImage, 
+        { opacity: 0, scale: 0.9 }, 
+        { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }
+      );
+    });
+  });
+
+  document.querySelectorAll('.image-close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      imageModal.style.display = 'none';
+      fullImage.src = '';
+    });
+  });
+
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal) {
+      imageModal.style.display = 'none';
+      fullImage.src = '';
     }
   });
 }

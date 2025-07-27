@@ -12,11 +12,9 @@ body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300FF00" d="M2 2l16 16-6-6-4 4-6-6z"/></svg>'), auto;
 }
 
-
-a, button, .btn, .card, .close, [role="button"], [onclick] {
+a, button, .btn, .card, .close, .image-close, [role="button"], [onclick] {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300FF00" d="M2 2l16 16-6-6-4 4-6-6z"/></svg>'), auto !important;
 }
-
 
 .cursor-trail {
   position: fixed;
@@ -272,7 +270,6 @@ iframe {
   border-radius: 4px;
 }
 
-
 .screenshots {
   display: flex;
   flex-wrap: nowrap;
@@ -285,17 +282,20 @@ iframe {
 }
 
 .screenshots::-webkit-scrollbar {
-  height: 8px;
+  height: 20px; /* Make scrollbar area taller */
 }
 
 .screenshots::-webkit-scrollbar-track {
   background: #0A0A0A;
+  border-radius: 10px; /* Optional, round edges */
 }
 
 .screenshots::-webkit-scrollbar-thumb {
   background: #00FF00;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 5px solid #0A0A0A; /* Makes the thumb visually thicker */
 }
+
 
 .screenshot {
   width: 200px;
@@ -304,13 +304,46 @@ iframe {
   border: 1px solid #00FF00;
   border-radius: 4px;
   box-shadow: 0 0 10px #00FF00;
-  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .screenshot:hover {
   transform: scale(1.05);
 }
 
+/* Image Modal Styles */
+.image-modal-content {
+  background: #0A0A0A;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 20px #00FF00;
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#full-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.image-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #00FF00;
+  cursor: pointer;
+}
+
+.image-close:hover {
+  text-shadow: 0 0 10px #00FF00;
+}
 
 @keyframes glitch {
   0% { transform: translate(0); }
@@ -324,7 +357,6 @@ iframe {
 .card:hover {
   animation: glitch 0.3s infinite;
 }
-
 
 @media (max-width: 768px) {
   main {
@@ -358,6 +390,12 @@ iframe {
   }
   .screenshot {
     width: 150px;
+  }
+  .image-modal-content {
+    width: 95%;
+  }
+  #full-image {
+    max-height: 70vh;
   }
 }
 
