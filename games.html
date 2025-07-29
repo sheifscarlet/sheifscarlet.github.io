@@ -8,6 +8,8 @@
   <title>Games - Artem Bobrov</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <!-- Optional: Add CSP meta tag if needed for YouTube embeds -->
+  <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube.com;">
 </head>
 <body>
   <canvas id="matrix"></canvas>
@@ -31,6 +33,13 @@
           </div>
           <h3>FROG JUMPER RUSH</h3>
           <p>Mobile vertical runner with tongue-swinging frog and unique experience each run</p>
+        </div>
+        <div class="card" data-modal="game7">
+          <div class="card-image-wrapper">
+            <img src="assets/images/games/pixelbrawl.png" alt="Pixel Brawl">
+          </div>
+          <h3>PIXEL BRAWL</h3>
+          <p>Roguelite shooter with procedurally generated rooms and intense combat</p>
         </div>
         <div class="card" data-modal="game3">
           <div class="card-image-wrapper">
@@ -65,7 +74,7 @@
             <img src="assets/images/games/golfik.png" alt="Game 1">
           </div>
           <h3>GOLFIK</h3>
-          <p>Updated 2D golf game with enhanced retro vibes</p>
+          <p>2D golf game with retro vibes</p>
         </div>
       </div>
     </section>
@@ -75,7 +84,7 @@
     <a href="https://github.com/sheifscarlet" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/artem-bobrovv/" target="_blank">LinkedIn</a>
     <a href="https://sheifscarlet.itch.io/" target="_blank">itch.io</a>
-    <a href="https://t.me/bibizianich" target="_blank">Telegram</a>
+    <a href="https://t.me/templeOS4444" target="_blank">Telegram</a>
     <a href="https://www.youtube.com/@sheifscarlet" target="_blank">Youtube</a>
   </footer>
   <div id="modal" class="modal" style="display: none;">
@@ -105,13 +114,52 @@
           <img src="assets/images/games/frogjumperrush_slide6.png" alt="FROG JUMPER RUSH Screenshot 6" class="screenshot">
         </div>
       </div>
-      <iframe src="https://www.youtube.com/embed/your-game6-video-id" frameborder="0" allowfullscreen></iframe>
+     <!-- <iframe data-src="https://www.youtube.com/embed/your-game6-video-id" src="" frameborder="0" allowfullscreen loading="lazy"></iframe> -->
       <div class="credits">
         <p class="modal-description">Credits: Art by Caz Creates Games, Elthen's Pixel Art Shop, Admurin, Azimus, Kacper Woźniak, PixyFantasyStudio, BDragon1727. Font by Burpy Fresh. VFX by pimen.</p>
       </div>
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/frog-jumper-rush" class="btn" target="_blank">Play on itch.io</a>
         <a href="https://github.com/sheifscarlet/frog-jumper-rush" class="btn btn-secondary" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+    <div class="modal-content" id="game7" style="display: none;">
+      <span class="close">×</span>
+      <h3>PIXEL BRAWL</h3>
+      <p class="modal-details">Role: Developer. Stack: Unity, C#, Shader Graph</p>
+      <p class="modal-release">Academic Project, 2025</p>
+      <p class="modal-description">Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. My teammates and I worked for 3 months on this PC game using Unity.<br><br>
+        - Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.<br>
+        - Implemented Gamepad and Keyboard/Mouse UI Navigation support.<br>
+        - Implemented procedural map generation.<br>
+        - Used Unity Internationalization System for 7 languages.<br>
+        - Designed AI using Unity's Behavior System.<br>
+        - Used Shader Graph for health feedback.<br>
+        - Implemented mechanics such as move, shoot, parry, and dash with invincibility frames.<br>
+        - Developed Debug Mode for testing all features.<br>
+        - Structured the project in modules using Assembly Definition.<br>
+        - Wrote Play/Edit Mode automated tests.
+      </p>
+      <div class="screenshots">
+        <div class="screenshot-wrapper">
+          <img src="assets/images/games/pixelbrawl_slide1.png" alt="PIXEL BRAWL Screenshot 1" class="screenshot">
+        </div>
+        <div class="screenshot-wrapper">
+          <img src="assets/images/games/pixelbrawl_slide2.png" alt="PIXEL BRAWL Screenshot 2" class="screenshot">
+        </div>
+        <div class="screenshot-wrapper">
+          <img src="assets/images/games/pixelbrawl_slide3.png" alt="PIXEL BRAWL Screenshot 3" class="screenshot">
+        </div>
+        <div class="screenshot-wrapper">
+          <img src="assets/images/games/pixelbrawl_slide4.png" alt="PIXEL BRAWL Screenshot 4" class="screenshot">
+        </div>
+        <div class="screenshot-wrapper">
+          <img src="assets/images/games/pixelbrawl_slide5.png" alt="PIXEL BRAWL Screenshot 5" class="screenshot">
+        </div>
+      </div>
+      <iframe data-src="https://www.youtube.com/embed/17__qGoin3c" src="" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      <div class="button-group">
+        <a href="https://carlosgama.itch.io/pixel-brawl" class="btn" target="_blank">Play on itch.io</a>
       </div>
     </div>
     <div class="modal-content" id="game3" style="display: none;">
@@ -137,7 +185,7 @@
           <img src="assets/images/games/watermelonsurvivor_slide5.png" alt="WATERMELON SURVIVOR Screenshot 5" class="screenshot">
         </div>
       </div>
-      <iframe src="https://www.youtube.com/embed/ShDzJO8npQA" frameborder="0" allowfullscreen></iframe>
+      <iframe data-src="https://www.youtube.com/embed/ShDzJO8npQA" src="" frameborder="0" allowfullscreen loading="lazy"></iframe>
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/watermelon-survivor" class="btn" target="_blank">Play on itch.io</a>
         <a href="https://github.com/sheifscarlet/watermelon-survivor" class="btn btn-secondary" target="_blank">View on GitHub</a>
@@ -163,7 +211,7 @@
           <img src="assets/images/games/supertankbros_slide4.png" alt="SUPER TANK BROS Screenshot 4" class="screenshot">
         </div>
       </div>
-      <iframe src="https://www.youtube.com/embed/your-game5-video-id" frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe data-src="https://www.youtube.com/embed/your-game5-video-id" src="" frameborder="0" allowfullscreen loading="lazy"></iframe> -->
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/super-tank-bros" class="btn" target="_blank">Play on itch.io</a>
         <a href="https://github.com/sheifscarlet/super-tank-bros" class="btn btn-secondary" target="_blank">View on GitHub</a>
@@ -186,7 +234,7 @@
           <img src="assets/images/games/keiontherun_slide3.png" alt="KEI ON THE RUN Screenshot 3" class="screenshot">
         </div>
       </div>
-      <iframe src="https://www.youtube.com/embed/your-game2-video-id" frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe data-src="https://www.youtube.com/embed/your-game2-video-id" src="" frameborder="0" allowfullscreen loading="lazy"></iframe> -->
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/kei-on-the-run" class="btn" target="_blank">Play on itch.io</a>
       </div>
@@ -214,6 +262,7 @@
           <img src="assets/images/games/quizmaster_slide5.png" alt="QUIZ MASTER Screenshot 5" class="screenshot">
         </div>
       </div>
+      <!-- <iframe data-src="https://www.youtube.com/embed/your-game4-video-id" src="" frameborder="0" allowfullscreen loading="lazy"></iframe> -->
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/quiz-master" class="btn" target="_blank">Play on itch.io</a>
         <a href="https://github.com/sheifscarlet/QuizMaster" class="btn btn-secondary" target="_blank">View on GitHub</a>
@@ -223,8 +272,8 @@
       <span class="close">×</span>
       <h3>GOLFIK</h3>
       <p class="modal-details">Role: Lead Developer. Stack: Unity, C#, Aseprite</p>
-      <p class="modal-release">Updated in 2025 on itch.io</p>
-      <p class="modal-description">An updated 2D golf game with enhanced retro pixel art</p>
+      <p class="modal-release">Released in 2024 on itch.io</p>
+      <p class="modal-description">2D golf game with enhanced retro pixel art</p>
       <div class="screenshots">
         <div class="screenshot-wrapper">
           <img src="assets/images/games/golfik_slide1.png" alt="GOLFIK Screenshot 1" class="screenshot">
@@ -233,7 +282,7 @@
           <img src="assets/images/games/golfik_slide2.png" alt="GOLFIK Screenshot 2" class="screenshot">
         </div>
       </div>
-      <iframe src="https://www.youtube.com/embed/your-game1-video-id" frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe data-src="https://www.youtube.com/embed/your-game1-video-id" src="" frameborder="0" allowfullscreen loading="lazy"></iframe> -->
       <div class="button-group">
         <a href="https://sheifscarlet.itch.io/golfik" class="btn" target="_blank">Play on itch.io</a>
         <a href="https://github.com/sheifscarlet/Golfik" class="btn btn-secondary" target="_blank">View on GitHub</a>

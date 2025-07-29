@@ -71,10 +71,17 @@ if (modal && cards.length) {
       const modalId = card.getAttribute('data-modal');
       document.querySelectorAll('.modal-content').forEach(content => {
         content.style.display = content.id === modalId ? 'block' : 'none';
+        // Set iframe src for the active modal
+        if (content.style.display === 'block') {
+          const iframe = content.querySelector('iframe');
+          if (iframe && iframe.getAttribute('data-src')) {
+            iframe.src = iframe.getAttribute('data-src'); // Set src from data-src
+          }
+        }
       });
       modal.style.display = 'block';
 
-      // Анимация элементов модалки
+      // Animation elements
       const modalContent = modal.querySelector('.modal-content[style*="block"]');
       gsap.fromTo(modalContent.querySelector('h3'), 
         { opacity: 0, y: 20 }, 
@@ -115,14 +122,20 @@ if (modal && cards.length) {
     closeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       modal.style.display = 'none';
-      document.querySelectorAll('iframe').forEach(iframe => iframe.src = '');
+      // Clear iframe src to stop video playback
+      document.querySelectorAll('iframe').forEach(iframe => {
+        iframe.src = ''; // Clear src to stop playback
+      });
     });
   });
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.style.display = 'none';
-      document.querySelectorAll('iframe').forEach(iframe => iframe.src = '');
+      // Clear iframe src to stop video playback
+      document.querySelectorAll('iframe').forEach(iframe => {
+        iframe.src = ''; // Clear src to stop playback
+      });
     }
   });
 }
